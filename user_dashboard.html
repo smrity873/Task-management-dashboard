@@ -43,7 +43,7 @@
     <main>
 
         <!-- task card  -->
-        <div class="grid lg:grid-cols-4 md:grid-cols-2 gap-8">
+        <div class="grid lg:grid-cols-4 md:grid-cols-2 gap-8 pb-6">
 
             <!-- 1st card  -->
             <div class=" bg-white p-4 rounded shadow-md">
@@ -68,7 +68,7 @@
 
             <!-- 2nd card  -->
             <div class=" bg-white p-4 rounded shadow-md">
-                <h3 class="text-sm pb-4 text-gray-500">TOTAL TASK</h3>
+                <h3 class="text-sm pb-4 text-gray-500">COMPLETED TASK</h3>
                 <div class="flex justify-between">
                     <div>
                         <h2 class="text-2xl font-semibold">1</h2>
@@ -89,7 +89,7 @@
             </div>
             <!-- 3rd card  -->
             <div class=" bg-white p-4 rounded shadow-md">
-                <h3 class="text-sm pb-4 text-gray-500">TOTAL TASK</h3>
+                <h3 class="text-sm pb-4 text-gray-500">TASK IN PROGRESS</h3>
                 <div class="flex justify-between">
                     <div>
                         <h2 class="text-2xl font-semibold">1</h2>
@@ -97,8 +97,8 @@
                     </div>
                     <div>
                         <button class="bg-yellow-200 rounded-full h-10 w-10 p-2">
-                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" class="text-yellow-600"
-                                stroke="currentColor" class="size-6">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2"
+                                class="text-yellow-600" stroke="currentColor" class="size-6">
                                 <path stroke-linecap="round" stroke-linejoin="round"
                                     d="M12 6v6h4.5m4.5 0a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" />
                             </svg>
@@ -110,7 +110,7 @@
             </div>
             <!-- 4th card  -->
             <div class=" bg-white p-4 rounded shadow-md">
-                <h3 class="text-sm pb-4 text-gray-500">TOTAL TASK</h3>
+                <h3 class="text-sm pb-4 text-gray-500">TODOS</h3>
                 <div class="flex justify-between">
                     <div>
                         <h2 class="text-2xl font-semibold">1</h2>
@@ -129,7 +129,144 @@
                 </div>
             </div>
         </div>
+
+        <!-- task summary  -->
+        <div class="grid lg:grid-cols-2 gap-8">
+
+            <!-- today's task -->
+            <div class="bg-white mt-1 p-6 shadow-sm rounded ">
+                <h1 class="text-xl font-medium pb-3">Today's Tasks</h1>
+                <div>
+                    <!-- 1  -->
+                    <div class="flex justify-between pb-3">
+                        <div class="flex items-center gap-2">
+                            <div class="bg-green-500 rounded-full w-2 h-2 "></div>
+                            <p class="text-sm">Complete project <br class="block md:hidden"> proposal</p>
+                        </div>
+                        <div class="text-gray-400 text-sm">
+                            <span>High</span>
+                        </div>
+                    </div>
+
+                    <!-- 2  -->
+                    <div class="flex justify-between pb-3">
+                        <div class="flex items-center gap-2">
+                            <div class="bg-orange-500 rounded-full w-2 h-2 "></div>
+                            <p class="text-sm">review team <br class="block md:hidden"> updates</p>
+                        </div>
+                        <div class="text-gray-400 text-sm">
+                            <span>Normal</span>
+                        </div>
+                    </div>
+
+                    <!-- 3  -->
+                    <div class="flex justify-between pb-3">
+                        <div class="flex items-center gap-2">
+                            <div class="bg-blue-500 rounded-full w-2 h-2 "></div>
+                            <p class="text-sm">Prepare for client <br class="block md:hidden"> meeting</p>
+                        </div>
+                        <div class="text-gray-400 text-sm">
+                            <span>Low</span>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+            <!-- All task  -->
+            <div class="mt-1 overflow-x-auto">
         
+                <div class="bg-white rounded shadow-sm p-6 ">
+                    <h2 class="text-xl font-semibold pb-2">All Tasks</h2>
+
+                    <!-- table head  -->
+                    <div class="grid grid-cols-4 p-2 border-b border-gray-100 text-sm text-gray-400">
+                        <div class=" text-sm text-gray-500">TASK TITLE</div>
+                        <div class=" text-sm text-gray-500">PRIORITY</div>
+                        <div class=" text-sm text-gray-500">TEAM</div>
+                        <div class=" text-sm text-gray-500">CREATED AT</div>
+                    </div>
+
+                    <!-- table row 1  -->
+                    <div class="grid grid-cols-4 p-2 border-b border-gray-100 text-sm items-center">
+
+                        <div class="flex items-center gap-1">
+                            <div class="bg-green-500 rounded-full w-2 h-2"></div>
+                            <div><span class="text-sm">Text Low <br class="block md:hidden"> Task</span></div>
+                        </div>
+
+                        <div class="">
+                            <span class="bg-blue-200 px-2 py-1 rounded text-sm text-blue-600">Low</span>
+                        </div>
+
+                        <div class="-space-x-2.5">
+                            <button
+                                class="bg-blue-500 rounded-full w-8 h-8 text-white border border-1 border-white text-sm">CA</button>
+                            <button
+                                class="bg-green-500 rounded-full w-8 h-8 text-white border border-1 border-white text-sm">JS</button>
+                            <button
+                                class="bg-orange-500 rounded-full w-8 h-8 text-white border border-1 border-white text-sm">B</button>
+                        </div>
+
+                        <div><span class="text-sm">9 months ago</span></div>
+
+                    </div>
+
+                    <!-- table row 2  -->
+                    <div class="grid grid-cols-4 p-2 border-b border-gray-100 text-sm items-center">
+
+                        <div class="flex items-center gap-1">
+                            <div class="bg-yellow-500 rounded-full w-2 h-2"></div>
+                            <div><span class="text-sm">TestTask</span></div>
+                        </div>
+
+                        <div class="">
+                            <span class="bg-yellow-200 px-2 py-1 rounded text-sm text-yellow-600">Normal</span>
+                        </div>
+
+                        <div class="-space-x-2.5">
+                            <button
+                                class="bg-rose-500 rounded-full w-8 h-8 text-white border border-1 border-white text-sm">CA</button>
+                            <button
+                                class="bg-violet-500 rounded-full w-8 h-8 text-white border border-1 border-white text-sm">EV</button>
+                            <button
+                                class="bg-orange-500 rounded-full w-8 h-8 text-white border border-1 border-white text-sm">B</button>
+                        </div>
+
+                        <div><span class="text-sm">9 months ago</span></div>
+
+                    </div>
+                    <!-- table row 3  -->
+                    <div class="grid grid-cols-4 p-2 border-b border-gray-100 text-sm items-center">
+
+                        <div class="flex items-center gap-1">
+                            <div class="bg-rose-500 rounded-full w-2 h-2"></div>
+                            <div><span class="text-sm">Test Task</span></div>
+                        </div>
+
+                        <div class="">
+                            <span class="bg-rose-200 px-2 py-1 rounded text-sm text-rose-600">High</span>
+                        </div>
+
+                        <div class="-space-x-2.5">
+                            <button
+                                class="bg-blue-500 rounded-full w-8 h-8 text-white border border-1 border-white text-sm">CA</button>
+                            <button
+                                class="bg-green-500 rounded-full w-8 h-8 text-white border border-1 border-white text-sm">JS</button>
+                            <button
+                                class="bg-rose-500 rounded-full w-8 h-8 text-white border border-1 border-white text-sm">AJ</button>
+                            <button
+                                class="bg-orange-500 rounded-full w-8 h-8 text-white border border-1 border-white text-sm">B</button>
+                        </div>
+
+                        <div><span class="text-sm">10 months ago</span></div>
+
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
     </main>
 
 
